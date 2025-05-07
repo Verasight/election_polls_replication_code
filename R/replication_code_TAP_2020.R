@@ -33,6 +33,8 @@ confint(vote_table)
 # calculate error 
 props <- coef(vote_table)
 
+# 2020 general election results pulled from this link: 
+#.   https://uselectionatlas.org/RESULTS/index.html
 # Trump - Biden difference
-error <- (46.90 - 51.25) - 100 * (props[2] - props[1])
+error <- (46.80 - 51.25) - 100 * (props[2] - props[1])
 error

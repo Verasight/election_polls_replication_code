@@ -6,7 +6,7 @@ Replication code for The Future of Election Polls: How to Increase Accuracy and 
 ANES: <br>
 The ANES code uses the April 30th 2025 edition of the 2024 preliminary release files, available for download here: https://electionstudies.org/data-center/2024-time-series-study/
 
-TAP 2020: <br 
+TAP 2020: <br>
 The TAP code uses the 2024 Taking America’s Pulse Survey dataset, available for download here: 
 https://doi.org/10.25940/ROPER-31118042 
 

@@ -45,5 +45,7 @@ confint(likely_vote_table)
 # Calculate Error
 props_likely <- coef(likely_vote_table)
 
+# 2024 general election results pulled from this link: 
+#.   https://uselectionatlas.org/RESULTS/index.html
 error_likely <- (49.71 - 48.24) - 100 * (props_likely[2] - props_likely[1])
 error_likely

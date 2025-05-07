@@ -62,6 +62,9 @@ svy_table_all <- svymean(~factor(vote), design = design_nomiss)
 confint(svy_table_all)
 
 props_all <- coef(svy_table_all)
+# 2024 general election results pulled from this link: 
+#.   https://uselectionatlas.org/RESULTS/index.html
+
 error_all <- (49.71 - 48.24) - 100 * (props_all[2] - props_all[1])
 error_all
 
