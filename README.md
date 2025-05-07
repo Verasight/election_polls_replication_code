@@ -1,5 +1,5 @@
 # election_polls_replication_code
-Replication code for The Future of Election Polls: How to Increase Accuracy and Lower Costs
+Replication code for [The Future of Election Polls: How to Increase Accuracy and Lower Costs](https://medium.com/@pe52/414bc5a870c0)
 
 **Where do I find the data?**
 
