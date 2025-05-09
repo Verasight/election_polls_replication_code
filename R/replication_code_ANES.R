@@ -4,6 +4,7 @@ library(haven)
 library(dplyr)
 library(survey)
 library(lubridate)
+library(tidyverse)
 
 # April 30th 2025 edition of the preliminary release files available for 
 #.   Download here: https://electionstudies.org/data-center/2024-time-series-study/
@@ -24,13 +25,14 @@ data <- data %>%
     date = ymd(completedate)
   )
 
-# Create Survey Design
-data <- data %>% filter(! is.na(V240105c))
+# Remove response with missing ID required for Survey Design 
+data <- data %>% filter(! is.na(V240107c))
 
+# Create Survey Design
 design <- svydesign(
-  ids = ~V240105c,
-  strata = ~V240105d,
-  weights = ~V240105a,
+  ids = ~V240107c,
+  strata = ~V240107d,
+  weights = ~V240107a,
   data = data,
   nest = TRUE
 )
@@ -64,8 +66,5 @@ confint(svy_table_all)
 props_all <- coef(svy_table_all)
 # 2024 general election results pulled from this link: 
 #.   https://uselectionatlas.org/RESULTS/index.html
-
 error_all <- (49.71 - 48.24) - 100 * (props_all[2] - props_all[1])
 error_all
-
-tab_all <- data %>% count(vote)

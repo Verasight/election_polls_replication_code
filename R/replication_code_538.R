@@ -129,6 +129,6 @@ summary(lm(error ~ method_ar2,
            data = filter(polls_lv, method_prob == 'probability')))
 
 # ANES comparison ----
-anes_error <- 6.4
+anes_error <- 5.7
 
 summarize(polls_lv, pct_worse = mean(abs(anes_error) > abs(error)))
